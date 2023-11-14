@@ -1,0 +1,4 @@
+
+ .imageIcons{
+    filter: invert(100%) sepia(100%) saturate(15%) hue-rotate(254deg) brightness(103%) contrast(105%)
+}

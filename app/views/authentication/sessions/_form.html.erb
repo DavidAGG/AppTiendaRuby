@@ -1,0 +1,48 @@
+<%= form_with(url: sessions_path) do |form| %>
+    <div class="bg-white">
+    <br>
+        <div class="mx-6 bg-center">
+            <%= form.label :login,"User", style: "display: block" %>
+            <%= form.text_field :login, required: true, class:"rounded-2xl w-full" %> 
+        </div>
+
+        <br>
+        
+        <div class="mx-6 bg-center">
+            <%= form.label :password, style: "display: block" %>
+            <%= form.password_field :password, required: true, class:"rounded-2xl w-full" %>
+        </div>
+
+        <br>
+
+         <!--BOTON PARA Laptop-->
+        <div class="hidden lg:block"  >
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            <button class=" items-center bg-purple-500 text-white hover:bg-purple-200 hover:text-purple-500 text-sm font-bold rounded-3xl py-2 px-2">
+                <%= form.submit %>
+            </button>
+        </div>
+
+        
+        <!--BOTON PARA TABLET-->
+        <div class="hidden sm:block lg:hidden"  >
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            <button class=" items-center bg-purple-500 text-white hover:bg-purple-200 hover:text-purple-500 text-sm font-bold rounded-3xl py-2 px-2">
+             <%= form.submit %>
+            </button>
+        </div>
+
+         <!--BOTON PARA MOVIL-->
+        <div class="sm:hidden"  >
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            <button class=" items-center bg-purple-500 text-white hover:bg-purple-200 hover:text-purple-500 text-sm font-bold rounded-3xl py-2 px-2">
+                <%= form.submit %>
+            </button>
+        </div>
+
+        <br>
+    </div>
+<%end%>

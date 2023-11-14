@@ -1,0 +1,57 @@
+<%= form_with model: @product do |form|%>
+
+    <!--ESTO ES PARA QUE SALGA MENSAJE DE ERROR SI SE QUEDAN LOSCAMPOS EN BLANCO Y SE DA SUBMIT-->
+    <% @product.errors.full_messages.each do |error|%>
+        <div>
+        <%= error %>
+        </div>
+    <%end%>
+
+    <div>
+    <%= form.label :title, "Nombre del artículo", class:"w-full text-gray-600"%>
+    <%= form.text_field :title, class:"w-full rounded-xl"%>
+    </div>
+
+    <div>
+    <%= form.label :description, "Descripción", class:"text-gray-600"%>
+    <br>
+    <%= form.text_area :description, class:"w-full rounded-xl"%>
+    </div>
+
+    <div>
+    <%= form.label :price, "Precio" , class:"text-gray-600"%>
+    <br>
+    <%= form.number_field :price, class:"w-full rounded-xl"%>
+    </div>
+
+    <br>
+
+    <div>
+    <%= form.label :category_id, "Categoría", class:"text-gray-600"%>
+    <br>
+    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name , class:"w-full rounded-2xl"%>
+    </div>
+
+    <br>
+
+    <div>
+    <%= form.label :photo, "Adjunte una imagen", class:"text-gray-600"%>
+    <%= form.file_field :photo%>
+    </div>
+
+    <br>
+    <!--BOTÓN TABLET-->
+    <div class="hidden sm:block">
+       &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+        <button class=" items-center bg-purple-500 text-white hover:bg-purple-200 hover:text-purple-500 text-sm font-bold rounded-3xl py-2 px-2">
+            <%= form.submit%>
+        </button>
+    </div>
+    <!--BOTÓN MÓVIL-->
+    <div class="sm:hidden">
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+        <button class=" items-center bg-purple-500 text-white hover:bg-purple-200 hover:text-purple-500 text-sm font-bold rounded-3xl py-2 px-2">
+            <%= form.submit%>
+        </button>
+    </div>
+<%end%>

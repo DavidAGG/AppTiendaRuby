@@ -1,0 +1,53 @@
+<div class="bg-white">
+    <%= form_with(model: @user) do |form| %>
+    
+        <div> 
+        <% @user.errors.full_messages.each do |error| %>
+            <div><%= error%></div>
+        <% end %>
+        </div>
+
+        <br>
+        
+        <div class="mx-10 bg-center">
+        <%= form.label :email, style: "display: block" %>
+        <%= form.email_field :email, required: true, class:"rounded-2xl w-full" %>
+        </div>
+
+        <br>
+
+        <div class="mx-10 bg-center">
+        <%= form.label :username, style: "display: block" %>
+        <%= form.text_field :username, required: true, class:"rounded-2xl w-full" %>
+        </div>
+
+        <br>
+
+        <div class="mx-10 bg-center">
+        <%= form.label :password, style: "display: block" %>
+        <%= form.password_field :password, required: true, class:"rounded-2xl w-full" %>
+        </div>
+
+        <br>
+
+        <!--BOTON TABLET-->
+        <div class="hidden sm:block"  >
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            <button class=" items-center bg-purple-500 text-white hover:bg-purple-200 hover:text-purple-500 text-sm font-bold rounded-3xl py-2 px-2">
+             <%= form.submit %>
+            </button>
+        </div>
+
+        <!--BOTON MOVIL-->
+        <div class="sm:hidden"  >
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            <button class=" items-center bg-purple-500 text-white hover:bg-purple-200 hover:text-purple-500 text-sm font-bold rounded-3xl py-2 px-2">
+                <%= form.submit %>
+            </button>
+        </div>
+
+       
+
+        <br>
+    <%end%>
+</div>

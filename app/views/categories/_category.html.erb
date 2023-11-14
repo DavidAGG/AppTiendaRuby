@@ -1,0 +1,36 @@
+<br>
+<div id="<%= dom_id category%>">
+  <div class="mx-10 lg:mx-20">
+    <div class=" lg:mx-20   ">
+      <div class="lg:mx-20 sm:mx-10 mx-10">
+        <div class="bg-purple-500 bg-center text-center text-white rounded-t-xl p-1 lg:mx-15 ">
+          <p>
+            <%= category.name %>
+          </p>
+        </div>
+      
+
+        <div class="hidden sm:block bg-white text-center text-black w-full rounded-b-xl py-1 ">
+          <%= link_to t('.edit'), edit_category_path(category), data: {turbo_frame: "modal"} %>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          <%= link_to t('.delete'), category_path(category), data: {
+            turbo_method: :delete,
+            turbo_confirm: '¿Seguro que desea eliminar?'} %> 
+        </div>
+    
+       <div class=" sm:hidden bg-white text-center text-black w-full rounded-b-xl p-1 ">
+          <%= link_to t('.edit'), edit_category_path(category), data: {turbo_frame: "modal"} %>
+          &nbsp; &nbsp; 
+          <%= link_to t('.delete'), category_path(category), data: {
+          turbo_method: :delete,
+          turbo_confirm: '¿Seguro que desea eliminar?'} %> 
+        </div>
+      </div>
+      
+
+    </div>
+  
+</div>
+    
+
+
