@@ -1,13 +1,14 @@
+<!--MOVIL-->
 <div class="sm:hidden">
     <!--Se muestran solo si el usuario está logeado-->
    <div><%= link_to 'Añadir producto', new_product_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100", data: {turbo_frame: "modal"} if Current.user  %> </div>
-    <div><%= link_to 'Añadir categoría', new_category_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100", data: {turbo_frame: "modal"} if Current.user  %></div>
+    <div><%= link_to 'Añadir categoría', new_category_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100", data: {turbo_frame: "modal"} if Current.user&.admin?  %></div>
     <div><%= link_to 'Ver categorías', categories_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100" if Current.user&.admin? %></div>
     <div><%= link_to 'Mis favoritos', favorites_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100" if Current.user %></div>
 
     <!--Se muestran solo si el usuario NO está logeado-->
-    <%= link_to 'Iniciar sesión', new_session_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100" unless Current.user %>
-    <%= link_to 'Registrarse', new_user_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100" unless Current.user%>
+    <div><%= link_to 'Iniciar sesión', new_session_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100" unless Current.user %></div>
+    <div><%= link_to 'Registrarse', new_user_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100" unless Current.user%></div>
 
     <div class="mb-2"><%= link_to 'Cerrar sesión', session_path(Current.user.id), data:{
         turbo_method: :delete,
@@ -19,7 +20,7 @@
 <div class="hidden sm:block ">
     <!--Se muestran solo si el usuario está logeado-->
    <%= link_to 'Añadir producto', new_product_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100", data: {turbo_frame: "modal"} if Current.user  %> 
-    <%= link_to 'Añadir categoría', new_category_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100", data: {turbo_frame: "modal"} if Current.user  %>
+    <%= link_to 'Añadir categoría', new_category_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100", data: {turbo_frame: "modal"} if Current.user&.admin?  %>
     <%= link_to 'Ver categorías', categories_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100" if Current.user&.admin? %>
     <%= link_to 'Mis favoritos', favorites_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100" if Current.user %>
 
@@ -27,10 +28,10 @@
     <%= link_to 'Iniciar sesión', new_session_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100" unless Current.user %>
     <%= link_to 'Registrarse', new_user_path, class: "mx-2 text-purple-500 font-bold sm:text-gray-100" unless Current.user%>
 
-   <div><%= link_to 'Cerrar sesión', session_path(Current.user.id), data:{
+   <%= link_to 'Cerrar sesión', session_path(Current.user.id), data:{
         turbo_method: :delete,
         turbo_confirm: '¿Estás seguro?'
-    }, class: "mx-2 text-red-500 font-bold sm:text-gray-100" if Current.user%> </div>
+    }, class: "mx-2 text-red-500 font-bold sm:text-gray-100 " if Current.user%> 
 
 </div>
 

@@ -19,7 +19,7 @@
                                 turbo_confirm: '¿Estás seguro?'
                             }  if @product.user == Current.user %>
 
-                            <%= link_to 'Ver perfil', user_path(@product.user.username) %>
+                           <p> <%= link_to 'Ver perfil', user_path(@product.user.username) %> </p>
 
                             <%= render partial: 'favorite', locals: {product: @product} %>
                         

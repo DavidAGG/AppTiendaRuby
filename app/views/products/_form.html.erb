@@ -40,17 +40,25 @@
     </div>
 
     <br>
+
+    <!--BOTÓN LAPTOP-->
+    <div class="hidden lg:block">
+        <button class=" contenedorInfo items-center bg-sky-950 text-white hover:bg-purple-200 hover:text-blue-500 text-sm font-bold rounded-3xl py-2 px-2">
+            <%= form.submit%>
+        </button>
+    </div>
+
     <!--BOTÓN TABLET-->
-    <div class="hidden sm:block">
+    <div class="hidden sm:block lg:hidden">
        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-        <button class=" items-center bg-purple-500 text-white hover:bg-purple-200 hover:text-purple-500 text-sm font-bold rounded-3xl py-2 px-2">
+        <button class=" items-center bg-sky-950 text-white hover:bg-purple-200 hover:text-blue-500 text-sm font-bold rounded-3xl py-2 px-2">
             <%= form.submit%>
         </button>
     </div>
     <!--BOTÓN MÓVIL-->
     <div class="sm:hidden">
         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-        <button class=" items-center bg-purple-500 text-white hover:bg-purple-200 hover:text-purple-500 text-sm font-bold rounded-3xl py-2 px-2">
+        <button class=" items-center bg-sky-950 text-white hover:bg-purple-200 hover:text-blue-500 text-sm font-bold rounded-3xl py-2 px-2">
             <%= form.submit%>
         </button>
     </div>

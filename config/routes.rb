@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   get '/products/:id', to: 'products#show', as: :product  #Para mostrar un producto en concreto
   get '/products/:id/edit', to: 'products#edit', as: :edit_product  
 
-  resources :products, path: '/' #PARA QUE AL CORRER EL LOCALHOST SE ABRA EN LA PAG DE PRODUCTOS
-
+  resources :home, path: '/' #PARA QUE AL CORRER EL LOCALHOST SE ABRA EN LA PAG DE INICIO
+  
+  get '/home', to: 'home#index'
   
 end

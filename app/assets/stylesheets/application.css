@@ -1,4 +1,41 @@
 
- .imageIcons{
+.imageIcons{
     filter: invert(100%) sepia(100%) saturate(15%) hue-rotate(254deg) brightness(103%) contrast(105%)
+}
+
+.contenedorBase {
+    position: relative;
+
+  }
+  .contenedorFondo{
+    position: absolute;
+    height: 550px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+  }
+  .contenedorFondo2{
+    position: absolute;
+    height: 550px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+  }
+  .contenedorInfo {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+  }
+  .contenedorTitulo {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-75%, 0%);
+  }
+
+.VistaInicio{
+  position: absolute;
+  height: 330px;
+  transform: translate(0%, 0%);
 }

@@ -13,8 +13,8 @@ class Authentication::UsersController < ApplicationController
         country_code = parsed_response.dig("countryCode")
         pp country_code
         if @user.save
-            FetchCountryJob.perform_later(@user.id, request.remote_ip)
-            UserMailer.with(user: @user).welcome.deliver_later
+            #FetchCountryJob.perform_later(@user.id, request.remote_ip) MARCA ERROR
+            #UserMailer.with(user: @user).welcome.deliver_later MARCA ERROR
             session[:user_id] = @user.id
             redirect_to products_path, notice: 'El usuario ha sido creado'
         else

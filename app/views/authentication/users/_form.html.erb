@@ -1,4 +1,4 @@
-<div class="bg-white">
+<div class="bg-gray-200">
     <%= form_with(model: @user) do |form| %>
     
         <div> 
@@ -30,10 +30,22 @@
 
         <br>
 
-        <!--BOTON TABLET-->
-        <div class="hidden sm:block"  >
+        <!--BOTON LAPTOP-->
+        <div class="hidden lg:block "  >
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
             &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-            <button class=" items-center bg-purple-500 text-white hover:bg-purple-200 hover:text-purple-500 text-sm font-bold rounded-3xl py-2 px-2">
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            <button class=" items-center bg-sky-950 text-white hover:bg-blue-200 hover:text-black text-sm font-bold rounded-3xl py-2 px-2">
+             <%= form.submit %>
+            </button>
+        </div>
+
+        <!--BOTON TABLET-->
+        <div class="hidden sm:block lg:hidden"  >
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            <button class=" items-center bg-sky-950 text-white hover:bg-blue-200 hover:text-black text-sm font-bold rounded-3xl py-2 px-2">
              <%= form.submit %>
             </button>
         </div>
@@ -41,7 +53,7 @@
         <!--BOTON MOVIL-->
         <div class="sm:hidden"  >
             &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-            <button class=" items-center bg-purple-500 text-white hover:bg-purple-200 hover:text-purple-500 text-sm font-bold rounded-3xl py-2 px-2">
+            <button class=" items-center bg-sky-950 text-white hover:bg-blue-200 hover:text-black text-sm font-bold rounded-3xl py-2 px-2">
                 <%= form.submit %>
             </button>
         </div>

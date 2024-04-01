@@ -1,5 +1,5 @@
-  <%= link_to product_path(product.id), class: 'product bg-purple-500 mb-2 rounded-xl sm:w-[calc(33.33333%_-_.5rem)] lg:w-[calc(25%_-_.5rem)]', 'data-turbo-frame': '_top' do %>
-    <p> <%= image_tag product.photo.attached? ? product.photo : 'placeholder.jpg', class: "w-full h-60 object-cover rounded-xl"%></p> <!--El if es para que no marque error si un producto no tiene foto-->
+  <%= link_to product_path(product.id), class: 'product bg-sky-950 mb-2 rounded-xl sm:w-[calc(33.33333%_-_.5rem)] lg:w-[calc(25%_-_.5rem)]', 'data-turbo-frame': '_top' do %>
+    <p> <%= image_tag product.photo.attached? ? product.photo : 'placeholder.jpg', class: "w-full h-60 object-cover rounded-t-xl"%></p> <!--El if es para que no marque error si un producto no tiene foto-->
     <div class="m-2">
       <h2 class="font-bold text-neutral-50"><%= product.title %></h2>
       <span class="text-neutral-100 text-xl">$<%= product.price%></span>

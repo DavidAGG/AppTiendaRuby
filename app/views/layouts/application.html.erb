@@ -11,10 +11,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class= "bg-gray-200">
+  <body class= "bg-white">
     <%= render 'shared/flash' %> <!--Carpeta views/shared, archivo _flash-->
     <%= render 'shared/header' %> <!--Carpeta views/shared, archivo _header-->
-    <div class="lg:container lg:mx-auto">
+    <div class="">
       <%= yield %>
     </div>
     <%= turbo_frame_tag "modal" %>

@@ -1,9 +1,16 @@
-<%= @user.username %>
+<div class="bg-gray-400 py-2 text-center font-sans text-lg font-bold">
+        <p> Productos de <%= @user.username %></p>
+</div>
 
-<%=turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
-
-        <%= render partial: 'products/product', collection: @products %>
-
-        <%=turbo_frame_tag "products-#{@pagy.next}", class: 'products', 
-        src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next%>
-<%end%>
+           
+<div class="p-5 bg-gray-300 rounded-b-xl">
+        <%=turbo_frame_tag "products-#{@pagy.page}", class: 'products flex flex-col w-full sm:flex-row sm:flex-wrap sm:gap-x-2 rounded-xl'  do %>
+                        
+                <%= render partial: 'products/product', collection: @products %> 
+                
+                <%=turbo_frame_tag "products-#{@pagy.next}", class: 'products flex flex-col w-full sm:flex-row sm:flex-wrap sm:gap-x-2 rounded-xl', 
+                src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next%>
+                        
+        <%end%>
+</div>
+      

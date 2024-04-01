@@ -1,0 +1,16 @@
+---
+- :first:
+    :link:  first
+    :image: mansion1.jpeg
+    :title: Our amazing Approach
+    :text:  Explore our unique Solution for all your Problems.
+- :second:
+    :link:  option
+    :image: mansion2.jpg
+    :title: Feedback
+    :text:  We encourage you to provide critical feedback.
+- :third: 
+    :link:  option
+    :image: mansion3.jpg
+    :title: Feedback
+    :text:  Prueba.

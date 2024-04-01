@@ -23,7 +23,7 @@ class CategoryComponent < ViewComponent::Base
   end 
 
   def background 
-    active? ? "bg-gray-300" : "bg-white"
+    active? ? "bg-gray-300" : "bg-gray-100"
   end
 
   def classes 
